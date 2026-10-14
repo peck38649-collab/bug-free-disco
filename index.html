@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Peculiar | My Personal Space</title>
+
   <style>
     * {
       box-sizing: border-box;
@@ -13,219 +14,304 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
       background: #fcfaff;
-      color: #41334f;
-      line-height: 1.7;
-    }
-
-    header {
-      background: #fff;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 1px solid #eee5fa;
-    }
-
-    header h2 {
-      color: #8054a6;
-      letter-spacing: 2px;
+      color: #51405f;
+      line-height: 1.8;
     }
 
     nav {
-      margin-top: 10px;
+      background: white;
+      padding: 22px 15px;
+      text-align: center;
+      border-bottom: 1px solid #eee1f8;
+    }
+
+    nav h2 {
+      color: #8054a2;
+      letter-spacing: 3px;
+      font-size: 25px;
+      margin-bottom: 12px;
     }
 
     nav a {
-      color: #76518f;
+      color: #735783;
       text-decoration: none;
       margin: 0 10px;
-      font-size: 14px;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      color: #a46cc5;
     }
 
     .hero {
       text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(135deg, #eee2ff, #fff5fc);
+      padding: 85px 20px;
+      background: linear-gradient(135deg, #f0e2ff, #fff2fa);
     }
 
-    .hero p:first-child {
-      color: #8b68ad;
+    .eyebrow {
       letter-spacing: 3px;
+      color: #9274a6;
       font-size: 13px;
-      text-transform: uppercase;
+      margin-bottom: 18px;
     }
 
     .hero h1 {
-      font-size: clamp(36px, 8vw, 56px);
-      color: #67418b;
-      margin: 12px 0;
+      font-size: clamp(35px, 7vw, 58px);
+      color: #694383;
+      line-height: 1.25;
+      margin-bottom: 25px;
     }
 
-    .hero .intro {
-      max-width: 520px;
+    .profile-image {
+      display: block;
+      width: 220px;
+      max-width: 80%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid white;
+      outline: 2px solid #c5a0df;
+      margin: 25px auto;
+      box-shadow: 0 8px 25px #8e6baa30;
+    }
+
+    .hero p {
+      max-width: 600px;
       margin: 0 auto 25px;
-      color: #665b70;
+      font-size: 18px;
+      color: #715f7c;
     }
 
     .button {
       display: inline-block;
-      background: #8054a6;
+      background: #8756a8;
       color: white;
-      padding: 12px 25px;
-      border-radius: 30px;
       text-decoration: none;
+      padding: 12px 27px;
+      border-radius: 30px;
+      margin-top: 8px;
+    }
+
+    .button:hover {
+      background: #684080;
     }
 
     section {
-      max-width: 850px;
-      margin: auto;
-      padding: 55px 22px;
+      padding: 65px 22px;
       text-align: center;
     }
 
     section h2 {
-      color: #70478f;
-      font-size: 28px;
-      margin-bottom: 15px;
+      color: #70488a;
+      font-size: 30px;
+      margin-bottom: 18px;
     }
 
-    .line {
-      width: 55px;
-      height: 3px;
-      background: #c4a5e5;
-      margin: 0 auto 22px;
-      border-radius: 5px;
+    .underline {
+      width: 65px;
+      height: 4px;
+      background: #c7a1e0;
+      border-radius: 10px;
+      margin: 0 auto 25px;
     }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 18px;
-      margin-top: 25px;
+    .section-text {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #71637a;
+      font-size: 17px;
     }
 
-    .card {
+    .interests {
+      background: #f5edfc;
+    }
+
+    .interest-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      max-width: 650px;
+      margin: 25px auto 0;
+    }
+
+    .interest-list span {
       background: white;
-      padding: 25px 18px;
-      border: 1px solid #eee4f8;
-      border-radius: 18px;
-      box-shadow: 0 8px 25px #6b47820b;
+      color: #80549a;
+      border: 1px solid #ead9f7;
+      padding: 10px 18px;
+      border-radius: 25px;
     }
 
-    .card h3 {
-      color: #8054a6;
-      margin-bottom: 8px;
+    .dream-card {
+      max-width: 600px;
+      margin: 25px auto 0;
+      padding: 28px 22px;
+      background: white;
+      border: 1px solid #eee0f8;
+      border-radius: 22px;
+      box-shadow: 0 8px 25px #8b69a310;
+    }
+
+    .dream-card h3 {
+      color: #8156a0;
+      margin-bottom: 10px;
     }
 
     .quote {
-      background: #f1e8fb;
-      color: #694987;
-      font-style: italic;
-      font-size: 20px;
-      padding: 45px 20px;
+      background: linear-gradient(135deg, #8054a0, #b28acb);
+      color: white;
+      padding: 55px 25px;
       text-align: center;
     }
 
-        <p>Building new skills and becoming better every day.</p>
-      </div>
-      <div class="card">
-        <h3>New Experiences</h3>
-        <p>Exploring opportunities and discovering the world.</p>
-      </div>
+    .quote p {
+      max-width: 650px;
+      margin: auto;
+      font-size: 21px;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px 15px;
+      background: white;
+      color: #8a7298;
+      font-size: 14px;
+    }
+
+    @media (max-width: 480px) {
+      nav h2 {
+        font-size: 21px;
+      }
+
+      nav a {
+        margin: 0 6px;
+        font-size: 14px;
+      }
+
+      section h2 {
+        font-size: 26px;
+      }
+
+      .hero {
+        padding: 65px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <h2>MY LITTLE WORLD</h2>
+    <a href="#about">About</a>
+    <a href="#interests">Interests</a>
+    <a href="#dreams">My Dreams</a>
+  </nav>
+
+  <header class="hero">
+    <div class="eyebrow">WELCOME TO MY PERSONAL SPACE</div>
+
+    <h1>Hello, I'm Peculiar.</h1>
+
+    <img
+      class="profile-image"
+      src="file_000000000041482109bfbc0f0920bb459.png"
+      alt="My personal purple portrait"
+    >
+
+    <p>
+      A young woman with dreams, creativity, and a
+      beautiful future to build. This is my little
+      corner of the internet.
+    </p>
+
+    <a class="button" href="#about">Get to know me</a>
+  </header>
+
+  <section id="about">
+    <h2>A Little About Me</h2>
+    <div class="underline"></div>
+
+    <p class="section-text">
+      Welcome to my world! I'm someone who believes in
+      growth, learning, creativity, and becoming a better
+      version of myself every day. I'm still discovering
+      who I am and building the future I dream about.
+    </p>
+  </section>
+
+  <section id="interests" class="interests">
+    <h2>Things I Love</h2>
+    <div class="underline"></div>
+
+    <p class="section-text">
+      These are some of the things that inspire me
+      and make my world special.
+    </p>
+
+    <div class="interest-list">
+      <span>💜 Creativity</span>
+      <span>✨ Personal Growth</span>
+      <span>📸 Pictures & Videos</span>
+      <span>🌸 Beauty & Style</span>
+      <span>📚 Learning</span>
+      <span>🌍 New Experiences</span>
     </div>
   </section>
 
   <section id="dreams">
-    <h2>My Dreams & Goals<
-    footer {
-      text-align: center;
-      padding: 25px;
-      background: #fff;
-      color: #897c94;
-      font-size: 13px;
-    }.
-    }
-  .profile-photo {
-  width: 170px;
-  height: 170px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 5px solid white;
-  box-shadow: 0 8px 25px rgba(90, 50, 120, 0.2);
-  margin: 25px auto;
-  display: block;
-    }</style>
-</head>
-<body>
+    <h2>My Dreams & Goals</h2>
+    <div class="underline"></div>
 
-  <header>
-    <h2>MY LITTLE WORLD</h2>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#interests">Interests</a>
-      <a href="#dreams">My Dreams</a>
-    </nav>
-  </header>
-
-  <div class="hero">
-    <p>Welcome to my personal space</p>
-    <h1>Hello, I'm Peculiar.</h1>
-    <img src="my-photo.jpg" alt="A photo of me"
-     class="profile-photo">
-    <p class="intro">
-      A young woman with dreams, creativity, and a beautiful future
-      to build. This is my little corner of the internet.
+    <p class="section-text">
+      I know that beautiful things take time.
+      I'm ready to learn, work hard, and take small
+      steps towards the life I want.
     </p>
-    <a class="button" href="#about">Get to know me</a>
-  </div>
 
-  <section id="about">
-    <h2>A Little About Me</h2>
-    <div class="line"></div>
-    <p>
-      I'm Peculiar. I'm learning, growing, discovering myself,
-      and becoming the person I dream of being. I believe that
-      every small step matters and that my future is worth working for.
-    </p>
-  </section>
+    <div class="dream-card">
+      <h3>🌷 The Future I'm Building</h3>
+      <p>
+        To become educated, independent, creative,
+        successful, and confident in the person
+        I am becoming.
+      </p>
+    </div>
 
-  <section id="interests">
-    <h2>Things I Love</h2>
-    <div class="line"></div>
-    <div class="cards">
-      <div class="card">
-        <h3>Creativity</h3>
-        <p>Expressing ideas and bringing beautiful things to life.</p>
-      </div>
-      <div class="card">
-        <h3>Learning</h3>/h2>
-    <div class="line"></div>
-    <div class="cards">
-      <div class="card">
-        <h3>Personal Growth</h3>
-        <p>To become confident, disciplined, and independent.</p>
-      </div>
-      <div class="card">
-        <h3>Education</h3>
-        <p>To keep learning and build a future I'm proud of.</p>
-      </div>
-      <div class="card">
-        <h3>My Future</h3>
-        <p>To create opportunities and live a meaningful life.</p>
-      </div>
+    <div class="dream-card">
+      <h3>💫 My Promise to Myself</h3>
+      <p>
+        I will keep learning, believe in my potential,
+        and remember that my journey is worth celebrating.
+      </p>
     </div>
   </section>
 
   <div class="quote">
-    "I am becoming the person I once dreamed of being."
+    <p>
+      "Little by little, day by day,
+      I'm creating a life that feels like mine. 💜"
+    </p>
   </div>
 
   <footer>
-    Made with love and a little lavender 💜
+    Made with ♡ by Peculiar
     <br>
-    © 2026 Peculiar
+    My Little World · 2026
   </footer>
 
 </body>
 </html>
+
+
+    
