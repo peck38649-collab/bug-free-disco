@@ -1,65 +1,219 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Personal Website</title>
+  <title>Peculiar | My Personal Space</title>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: Arial, sans-serif;
-      background: #f5f0ff;
-      color: #25213b;
+      background: #fcfaff;
+      color: #41334f;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #eee5fa;
+    }
+
+    header h2 {
+      color: #8054a6;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #76518f;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #eee2ff, #fff5fc);
+    }
+
+    .hero p:first-child {
+      color: #8b68ad;
+      letter-spacing: 3px;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 8vw, 56px);
+      color: #67418b;
+      margin: 12px 0;
+    }
+
+    .hero .intro {
+      max-width: 520px;
+      margin: 0 auto 25px;
+      color: #665b70;
+    }
+
+    .button {
+      display: inline-block;
+      background: #8054a6;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+    }
+
+    section {
+      max-width: 850px;
+      margin: auto;
+      padding: 55px 22px;
       text-align: center;
     }
-    header {
-      background: #6c3ce9;
-      color: white;
-      padding: 50px 20px;
+
+    section h2 {
+      color: #70478f;
+      font-size: 28px;
+      margin-bottom: 15px;
     }
-    h1 {
-      font-size: 36px;
+
+    .line {
+      width: 55px;
+      height: 3px;
+      background: #c4a5e5;
+      margin: 0 auto 22px;
+      border-radius: 5px;
     }
-    main {
-      padding: 35px 20px;
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 18px;
+      margin-top: 25px;
     }
+
     .card {
       background: white;
-      padding: 25px;
-      margin: 20px auto;
-      max-width: 500px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px #ddd;
+      padding: 25px 18px;
+      border: 1px solid #eee4f8;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px #6b47820b;
     }
+
+    .card h3 {
+      color: #8054a6;
+      margin-bottom: 8px;
+    }
+
+    .quote {
+      background: #f1e8fb;
+      color: #694987;
+      font-style: italic;
+      font-size: 20px;
+      padding: 45px 20px;
+      text-align: center;
+    }
+
     footer {
-      padding: 20px;
-      background: #25213b;
-      color: white;
+      text-align: center;
+      padding: 25px;
+      background: #fff;
+      color: #897c94;
+      font-size: 13px;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Welcome to My Website!</h1>
-    <p>A little space on the internet that belongs to me.</p>
+    <h2>MY LITTLE WORLD</h2>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#interests">Interests</a>
+      <a href="#dreams">My Dreams</a>
+    </nav>
   </header>
 
-  <main>
-    <div class="card">
-      <h2>About Me</h2>
-      <p>Hello! Welcome to my personal website.</p>
-      <p>I'm learning new skills and building my online presence.</p>
-    </div>
+  <div class="hero">
+    <p>Welcome to my personal space</p>
+    <h1>Hello, I'm Peculiar.</h1>
+    <p class="intro">
+      A young woman with dreams, creativity, and a beautiful future
+      to build. This is my little corner of the internet.
+    </p>
+    <a class="button" href="#about">Get to know me</a>
+  </div>
 
-    <div class="card">
-      <h2>My Goals</h2>
-      <p>Learn, grow, create, and achieve great things.</p>
+  <section id="about">
+    <h2>A Little About Me</h2>
+    <div class="line"></div>
+    <p>
+      I'm Peculiar. I'm learning, growing, discovering myself,
+      and becoming the person I dream of being. I believe that
+      every small step matters and that my future is worth working for.
+    </p>
+  </section>
+
+  <section id="interests">
+    <h2>Things I Love</h2>
+    <div class="line"></div>
+    <div class="cards">
+      <div class="card">
+        <h3>Creativity</h3>
+        <p>Expressing ideas and bringing beautiful things to life.</p>
+      </div>
+      <div class="card">
+        <h3>Learning</h3>
+        <p>Building new skills and becoming better every day.</p>
+      </div>
+      <div class="card">
+        <h3>New Experiences</h3>
+        <p>Exploring opportunities and discovering the world.</p>
+      </div>
     </div>
-  </main>
+  </section>
+
+  <section id="dreams">
+    <h2>My Dreams & Goals</h2>
+    <div class="line"></div>
+    <div class="cards">
+      <div class="card">
+        <h3>Personal Growth</h3>
+        <p>To become confident, disciplined, and independent.</p>
+      </div>
+      <div class="card">
+        <h3>Education</h3>
+        <p>To keep learning and build a future I'm proud of.</p>
+      </div>
+      <div class="card">
+        <h3>My Future</h3>
+        <p>To create opportunities and live a meaningful life.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="quote">
+    "I am becoming the person I once dreamed of being."
+  </div>
 
   <footer>
-    <p>Made with love ❤️</p>
+    Made with love and a little lavender 💜
+    <br>
+    © 2026 Peculiar
   </footer>
+
 </body>
 </html>
