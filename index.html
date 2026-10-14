@@ -205,7 +205,166 @@
       .hero {
         padding: 65px 18px;
       }
-    }
+    
+/* LUXURY PURPLE & GOLD UPGRADE */
+:root {
+  --deep-purple: #4b246b;
+  --purple: #8051a0;
+  --lavender: #f5edff;
+  --gold: #c9a45c;
+  --soft-white: #fffaff;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--soft-white);
+  color: #493b52;
+  line-height: 1.8;
+}
+
+nav {
+  background: rgba(255, 250, 255, 0.97);
+  padding: 28px 16px;
+  border-bottom: 1px solid #eadcf4;
+  text-align: center;
+}
+
+nav h2 {
+  color: var(--deep-purple);
+  letter-spacing: 4px;
+  font-size: 25px;
+  margin-bottom: 18px;
+}
+
+nav a {
+  color: var(--deep-purple);
+  text-decoration: none;
+  margin: 8px 10px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+.hero {
+  background: linear-gradient(
+    145deg,
+    #efe0ff,
+    #fff6fc,
+    #f6eaff
+  );
+  padding: 75px 22px;
+  text-align: center;
+}
+
+.hero h1 {
+  color: var(--deep-purple);
+  font-size: clamp(34px, 7vw, 58px);
+  line-height: 1.2;
+  margin: 25px 0;
+}
+
+.eyebrow {
+  color: #856b91;
+  letter-spacing: 4px;
+  font-size: 13px;
+}
+
+.hero img {
+  width: min(82vw, 390px);
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border: 3px solid var(--gold);
+  border-radius: 50%;
+  padding: 6px;
+  background: white;
+  box-shadow: 0 15px 40px rgba(75, 36, 107, 0.18);
+  margin: 22px auto;
+}
+
+.hero p {
+  max-width: 760px;
+  margin: 24px auto;
+  font-size: 19px;
+  color: #6b5a73;
+}
+
+button,
+.btn,
+.hero a.button {
+  background: var(--deep-purple);
+  color: white;
+  border: 1px solid var(--gold);
+  border-radius: 30px;
+  padding: 14px 28px;
+  text-decoration: none;
+}
+
+section {
+  padding: 55px 22px;
+}
+
+section h2 {
+  color: var(--deep-purple);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+section p {
+  max-width: 780px;
+  margin: 0 auto 18px;
+}
+
+section:nth-of-type(even) {
+  background: #f5edff;
+}
+
+section:nth-of-type(odd) {
+  background: #fffaff;
+}
+
+footer {
+  background: var(--deep-purple);
+  color: white;
+  text-align: center;
+  padding: 28px 18px;
+  border-top: 3px solid var(--gold);
+}
+
+a {
+  transition: color 0.25s ease;
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 22px 10px;
+  }
+
+  nav h2 {
+    font-size: 21px;
+    letter-spacing: 2px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 6px;
+  }
+
+  .hero {
+    padding: 52px 18px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  section {
+    padding: 42px 18px;
+  }
+}
+}
   </style>
 </head>
 
