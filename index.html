@@ -3,496 +3,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SkillBloom | Learn, Create, Pratise, Grow</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #fcfaff;
-      color: #51405f;
-      line-height: 1.8;
-    }
-
-    nav {
-      background: white;
-      padding: 22px 15px;
-      text-align: center;
-      border-bottom: 1px solid #eee1f8;
-    }
-
-    nav h2 {
-      color: #8054a2;
-      letter-spacing: 3px;
-      font-size: 25px;
-      margin-bottom: 12px;
-    }
-
-    nav a {
-      color: #735783;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 16px;
-    }
-
-    nav a:hover {
-      color: #a46cc5;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 85px 20px;
-      background: linear-gradient(135deg, #f0e2ff, #fff2fa);
-    }
-
-    .eyebrow {
-      letter-spacing: 3px;
-      color: #9274a6;
-      font-size: 13px;
-      margin-bottom: 18px;
-    }
-
-    .hero h1 {
-      font-size: clamp(35px, 7vw, 58px);
-      color: #694383;
-      line-height: 1.25;
-      margin-bottom: 25px;
-    }
-
-    .profile-image {
-      display: block;
-      width: 220px;
-      max-width: 80%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 5px solid white;
-      outline: 2px solid #c5a0df;
-      margin: 25px auto;
-      box-shadow: 0 8px 25px #8e6baa30;
-    }
-
-    .hero p {
-      max-width: 600px;
-      margin: 0 auto 25px;
-      font-size: 18px;
-      color: #715f7c;
-    }
-
-    .button {
-      display: inline-block;
-      background: #8756a8;
-      color: white;
-      text-decoration: none;
-      padding: 12px 27px;
-      border-radius: 30px;
-      margin-top: 8px;
-    }
-
-    .button:hover {
-      background: #684080;
-    }
-
-    section {
-      padding: 65px 22px;
-      text-align: center;
-    }
-
-    section h2 {
-      color: #70488a;
-      font-size: 30px;
-      margin-bottom: 18px;
-    }
-
-    .underline {
-      width: 65px;
-      height: 4px;
-      background: #c7a1e0;
-      border-radius: 10px;
-      margin: 0 auto 25px;
-    }
-
-    .section-text {
-      max-width: 650px;
-      margin: 0 auto;
-      color: #71637a;
-      font-size: 17px;
-    }
-
-    .interests {
-      background: #f5edfc;
-    }
-
-    .interest-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      max-width: 650px;
-      margin: 25px auto 0;
-    }
-
-    .interest-list span {
-      background: white;
-      color: #80549a;
-      border: 1px solid #ead9f7;
-      padding: 10px 18px;
-      border-radius: 25px;
-    }
-
-    .dream-card {
-      max-width: 600px;
-      margin: 25px auto 0;
-      padding: 28px 22px;
-      background: white;
-      border: 1px solid #eee0f8;
-      border-radius: 22px;
-      box-shadow: 0 8px 25px #8b69a310;
-    }
-
-    .dream-card h3 {
-      color: #8156a0;
-      margin-bottom: 10px;
-    }
-.dream-card p {
-  color: #55505c;
-  opacity: 1;
-}
-    .quote {
-      background: linear-gradient(135deg, #8054a0, #b28acb);
-      color: white;
-      padding: 55px 25px;
-      text-align: center;
-    }
-
-    .quote p {
-      max-width: 650px;
-      margin: auto;
-      font-size: 21px;
-      font-style: italic;
-    }
-
-    footer {
-      text-align: center;
-      padding: 28px 15px;
-      background: white;
-      color: #8a7298;
-      font-size: 14px;
-    }
-
-    @media (max-width: 480px) {
-      nav h2 {
-        font-size: 21px;
-      }
-
-      nav a {
-        margin: 0 6px;
-        font-size: 14px;
-      }
-
-      section h2 {
-        font-size: 26px;
-      }
-
-      .hero {
-        padding: 65px 18px;
-      }
-    
-/* LUXURY PURPLE & GOLD UPGRADE */
-:root {
-  --deep-purple: #4b246b;
-  --purple: #8051a0;
-  --lavender: #f5edff;
-  --gold: #c9a45c;
-  --soft-white: #fffaff;
-}
-
-body {
-  font-family: Georgia, "Times New Roman", serif;
-  background: var(--soft-white);
-  color: #493b52;
-  line-height: 1.8;
-}
-
-nav {
-  background: rgba(255, 250, 255, 0.97);
-  padding: 28px 16px;
-  border-bottom: 1px solid #eadcf4;
-  text-align: center;
-}
-
-nav h2 {
-  color: var(--deep-purple);
-  letter-spacing: 4px;
-  font-size: 25px;
-  margin-bottom: 18px;
-}
-
-nav a {
-  color: var(--deep-purple);
-  text-decoration: none;
-  margin: 8px 10px;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: var(--gold);
-}
-
-.hero {
-  background: linear-gradient(
-    145deg,
-    #efe0ff,
-    #fff6fc,
-    #f6eaff
-  );
-  padding: 75px 22px;
-  text-align: center;
-}
-
-.hero h1 {
-  color: var(--deep-purple);
-  font-size: clamp(34px, 7vw, 58px);
-  line-height: 1.2;
-  margin: 25px 0;
-}
-
-.eyebrow {
-  color: #856b91;
-  letter-spacing: 4px;
-  font-size: 13px;
-}
-
-.hero img {
-  width: min(82vw, 390px);
-  height: auto;
-  max-width: 100%;
-  object-fit: contain;
-  border: 3px solid var(--gold);
-  border-radius: 50%;
-  padding: 6px;
-  background: white;
-  box-shadow: 0 15px 40px rgba(75, 36, 107, 0.18);
-  margin: 22px auto;
-}
-
-.hero p {
-  max-width: 760px;
-  margin: 24px auto;
-  font-size: 19px;
-  color: #6b5a73;
-}
-
-button,
-.btn,
-.hero a.button {
-  background: var(--deep-purple);
-  color: white;
-  border: 1px solid var(--gold);
-  border-radius: 30px;
-  padding: 14px 28px;
-  text-decoration: none;
-}
-
-section {
-  padding: 55px 22px;
-}
-
-section h2 {
-  color: var(--deep-purple);
-  text-align: center;
-  margin-bottom: 24px;
-}
-
-section p {
-  max-width: 780px;
-  margin: 0 auto 18px;
-}
-
-section:nth-of-type(even) {
-  background: #f5edff;
-}
-
-section:nth-of-type(odd) {
-  background: #fffaff;
-}
-
-footer {
-  background: var(--deep-purple);
-  color: white;
-  text-align: center;
-  padding: 28px 18px;
-  border-top: 3px solid var(--gold);
-}
-
-a {
-  transition: color 0.25s ease;
-}
-
-@media (max-width: 600px) {
-  nav {
-    padding: 22px 10px;
-  }
-
-  nav h2 {
-    font-size: 21px;
-    letter-spacing: 2px;
-  }
-
-  nav a {
-    display: inline-block;
-    margin: 6px;
-  }
-
-  .hero {
-    padding: 52px 18px;
-  }
-
-  .hero p {
-    font-size: 17px;
-  }
-
-  section {
-    padding: 42px 18px;
-  }
-}
-}     
- {   
-}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkillBloom | Learn, Create, Practise, Grow</title>
+<style>
+:root{--purple:#6841a5;--deep:#35204f;--lavender:#f3eaff;--pink:#fff5fb;--text:#4b4554}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#fffaff;color:var(--text);line-height:1.7}
+header{background:white;padding:18px 6%;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;border-bottom:1px solid #eee4f6}
+.logo{font-size:25px;font-weight:800;color:var(--purple)}
+.logo span{color:#d68bb9}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{color:var(--deep);text-decoration:none;font-weight:600}
+nav a:hover{color:#ad69c8}
+.hero{text-align:center;padding:75px 20px 85px;background:linear-gradient(135deg,#f0e4ff,#fff1f8)}
+.tag{color:var(--purple);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:12px}
+h1{font-size:clamp(38px,7vw,65px);line-height:1.15;color:var(--deep);margin:18px auto;max-width:800px}
+.hero p{max-width:650px;margin:0 auto 25px;font-size:18px}
+.button{display:inline-block;background:var(--purple);color:white;padding:12px 22px;border:0;border-radius:30px;text-decoration:none;font-weight:700;cursor:pointer}
+.button:hover{background:var(--deep)}
+.button.light{background:white;color:var(--purple);border:1px solid #e5d5f5}
+section{padding:65px 6%;scroll-margin-top:20px}
+.section-head{text-align:center;max-width:650px;margin:0 auto 35px}
+h2{font-size:clamp(28px,4vw,38px);color:var(--deep);line-height:1.3;margin-bottom:12px}
+.section-head p{color:#716779}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:1100px;margin:auto}
+.card{background:white;border:1px solid #eee3f6;border-radius:20px;padding:25px;box-shadow:0 8px 25px #6841a50b}
+.card .emoji{font-size:35px}
+.card h3{color:var(--purple);font-size:21px;margin:8px 0}
+.card p{margin-bottom:16px}
+.card a{color:var(--purple);font-weight:700;text-decoration:none}
+.soft{background:var(--pink)}
+.steps{max-width:850px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:15px}
+.step{text-align:center;background:white;padding:22px 15px;border-radius:16px;border:1px solid #f0e3f5}
+.number{width:40px;height:40px;border-radius:50%;background:var(--lavender);color:var(--purple);font-weight:800;display:grid;place-items:center;margin:0 auto 10px}
+.practice{max-width:760px;margin:auto;background:var(--lavender);padding:28px;border-radius:20px}
+.practice li{margin:8px 0 8px 22px}
+footer{text-align:center;padding:35px 20px;background:var(--deep);color:white}
+footer p{margin:5px}
+.small{font-size:13px;opacity:.85}
+@media(max-width:600px){header{justify-content:center;text-align:center}nav{justify-content:center;gap:12px}.hero{padding:55px 18px 65px}section{padding:48px 5%}}
+</style>
 </head>
-
 <body>
-
+<header>
+  <a class="logo" href="#home" style="text-decoration:none">Skill<span>Bloom</span> 🌱</a>
   <nav>
-    <h2>MY LITTLE WORLD</h2>
+    <a href="#home">Home</a>
+    <a href="#learn">Learn</a>
+    <a href="#create">Create</a>
+    <a href="#practice">Practise</a>
     <a href="#about">About</a>
-    <a href="#interests">Interests</a>
-    <a href="#dreams">My Dreams</a>
   </nav>
+</header>
 
-  <header class="hero">
-    <div class="eyebrow">WELCOME TO MY PERSONAL SPACE</div>
+<main>
+<section class="hero" id="home">
+  <div class="tag">Your journey starts here</div>
+  <h1>Learn a skill.<br>Create something amazing.</h1>
+  <p>Welcome to SkillBloom — a friendly space for beginners to learn digital skills, practise their ideas, and grow with confidence.</p>
+  <a class="button" href="#learn">Start Learning 🌱</a>
+  <a class="button light" href="#create">Explore Creativity</a>
+</section>
 
-    <h1>Hello, I'm Peculiar.</h1>
-
-    <img
-      class="profile-image"
-      
-      
-    src="file_00000000041482109bfbc0f0920bb459.png"
-      
-      
-      
-      alt="My personal purple portrait"
-    
-      
-    >
-
-    
-    
-    
-    
-   
-    
-    <p>
-      A young woman with dreams, creativity, and a
-      beautiful future to build. This is my little
-      corner of the internet.
-   
-    
-    </p>
-
-  
-    
-    <a class="button" href="#about">Get to know me</a>
-  </header>
-
-  <section id="about">
-    <h2>A Little About Me</h2>
-    <div class="underline"></div>
-
-    <p class="section-text">
-      Welcome to my world! I'm someone who believes in
-      growth, learning, creativity, and becoming a better
-      version of myself every day. I'm still discovering
-      who I am and building the future I dream about.
-    </p>
-  </section>
-
-  <section id="interests" class="interests">
-    <h2>Things I Love</h2>
-    <div class="underline"></div>
-
-    <p class="section-text">
-      These are some of the things that inspire me
-      and make my world special.
-    </p>
-
-    <div class="interest-list">
-      <span>💜 Creativity</span>
-      <span>✨ Personal Growth</span>
-      <span>📸 Pictures & Videos</span>
-      <span>🌸 Beauty & Style</span>
-      <span>📚 Learning</span>
-      <span>🌍 New Experiences</span>
-    </div>
-  </section>
-
-  <section id="dreams">
-    <h2>My Dreams & Goals</h2>
-    <div class="underline"></div>
-
-    <p class="section-text">
-      I know that beautiful things take time.
-      I'm ready to learn, work hard, and take small
-      steps towards the life I want.
-    </p>
-
-    <div class="dream-card">
-      <h3>🌷 The Future I'm Building</h3>
-      <p>
-        To become educated, independent, creative,
-        successful, and confident in the person
-        I am becoming.
-      </p>
-    </div>
-
-    <div class="dream-card">
-      <h3>💫 My Promise to Myself</h3>
-      <p>
-        I will keep learning, believe in my potential,
-        and remember that my journey is worth celebrating.
-      </p>
-    </div>
-  </section>
-
-  <div class="quote">
-    <p>
-      "Little by little, day by day,
-      I'm creating a life that feels like mine. 💜"
-    </p>
+<section id="learn">
+  <div class="section-head">
+    <div class="tag">Learn something new</div>
+    <h2>Choose Your Learning Path</h2>
+    <p>Start with the basics. Learn at your own pace and build your skills one step at a time.</p>
   </div>
+  <div class="grid">
+    <article class="card">
+      <div class="emoji">📱</div>
+      <h3>Digital Marketing</h3>
+      <p>Learn how brands reach people online, understand audiences, and create useful marketing content.</p>
+      <a href="#practice">Explore beginner practice →</a>
+    </article>
+    <article class="card">
+      <div class="emoji">🎬</div>
+      <h3>Content Creation</h3>
+      <p>Learn to plan video ideas, write short scripts, tell stories, and create engaging posts.</p>
+      <a href="#practice">Explore beginner practice →</a>
+    </article>
+    <article class="card">
+      <div class="emoji">🎨</div>
+      <h3>Graphic Design</h3>
+      <p>Discover colours, fonts, layouts, and how to design clear and attractive graphics.</p>
+      <a href="#practice">Explore beginner practice →</a>
+    </article>
+  </div>
+</section>
 
-  <footer>
-    Made with ♡ by Peculiar
-    <br>
-    My Little World · 2026
-  </footer>
+<section class="soft" id="create">
+  <div class="section-head">
+    <div class="tag">Turn knowledge into action</div>
+    <h2>Learn It. Then Create It.</h2>
+    <p>Every new skill gives you an opportunity to make something of your own.</p>
+  </div>
+  <div class="grid">
+    <article class="card">
+      <div class="emoji">💡</div>
+      <h3>Find an Idea</h3>
+      <p>Choose a topic you care about and decide what you want to make.</p>
+    </article>
+    <article class="card">
+      <div class="emoji">🛠️</div>
+      <h3>Make Your First Draft</h3>
+      <p>Use what you've learned to create a simple design, video, or campaign idea.</p>
+    </article>
+    <article class="card">
+      <div class="emoji">✨</div>
+      <h3>Improve and Share</h3>
+      <p>Review your work, make improvements, and celebrate what you've achieved.</p>
+    </article>
+  </div>
+</section>
 
+<section id="practice">
+  <div class="section-head">
+    <div class="tag">Your first mini project</div>
+    <h2>Let's Practise!</h2>
+    <p>You don't need to know everything before you begin. Start small and learn by doing.</p>
+  </div>
+  <div class="practice">
+    <h3 style="color:var(--deep)">🌟 Beginner Challenge: Create Something Today</h3>
+    <ol>
+      <li><strong>Choose:</strong> Pick digital marketing, content creation, or graphic design.</li>
+      <li><strong>Plan:</strong> Write down one thing you want to make.</li>
+      <li><strong>Create:</strong> Spend 15 minutes making your first version.</li>
+      <li><strong>Reflect:</strong> Write one thing you learned and one thing to improve.</li>
+    </ol>
+    <p id="challenge-message" style="margin:18px 0">Ready to take your first step?</p>
+    <button class="button" onclick="startChallenge()">I'm Ready to Practise!</button>
+  </div>
+</section>
+
+<section class="soft" id="about">
+  <div class="section-head">
+    <div class="tag">A little about us</div>
+    <h2>Welcome to SkillBloom</h2>
+    <p>SkillBloom is a learning and creativity platform built around one simple idea: learn a skill, use it to create something, practise, and keep growing.</p>
+    <p style="margin-top:15px">You don't have to be an expert to begin. Every expert was once a beginner. 🌱</p>
+    <a class="button" href="#learn" style="margin-top:22px">Find Your First Skill</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <h2 style="color:white">SkillBloom 🌱</h2>
+  <p>Learn. Create. Practise. Grow.</p>
+  <p class="small">A little progress every day adds up.</p>
+  <p class="small">© 2026 SkillBloom</p>
+</footer>
+
+<script>
+function startChallenge(){
+  document.getElementById("challenge-message").textContent =
+    "Wonderful! 🌱 Choose one skill above, try the mini project, and be proud that you started. Your progress begins with practice!";
+}
+</script>
 </body>
 </html>
+
+
+    
+
 
 
     
