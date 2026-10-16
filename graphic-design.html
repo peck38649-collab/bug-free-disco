@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkillBloom | Graphic Design</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#fff7fc;color:#35204f;line-height:1.7}
+header{background:white;padding:20px 6%;box-shadow:0 2px 10px #ddd}
+header h2{color:#6841a5;margin:0}
+main{max-width:850px;margin:30px auto;padding:20px}
+section{background:white;padding:25px;border-radius:20px;margin-bottom:22px;border:1px solid #eadff0}
+h1,h2{color:#6841a5}
+button{background:#6841a5;color:white;border:0;padding:13px 20px;border-radius:10px;font-size:16px}
+input,textarea{padding:12px;width:90%;margin:8px 0;border:1px solid #ccc;border-radius:8px}
+</style>
+</head>
+<body>
+<header>
+<h2>SkillBloom 🌱</h2>
+<p>Learn • Create • Practise • Grow</p>
+</header>
+<main>
+<section>
+<p>YOUR LEARNING JOURNEY</p>
+<h1>Graphic Design for Beginners 🎨</h1>
+<p>Learn how colours, fonts, shapes and layouts work together to communicate ideas.</p>
+<a href="#lesson"><button>Start Lesson 1 ↓</button></a>
+</section>
+<section id="lesson">
+<p>LESSON 1</p>
+<h2>What Is Graphic Design?</h2>
+<p>Graphic design is the art of using pictures, colours, text and layouts to communicate a message.</p>
+<h3>Examples of graphic design</h3>
+<ul>
+<li>Social media flyers</li>
+<li>Business logos</li>
+<li>Posters and banners</li>
+<li>Product advertisements</li>
+</ul>
+<h3>Four important design elements</h3>
+<p><b>1. Colour:</b> Creates a feeling and attracts attention.</p>
+<p><b>2. Typography:</b> The style and arrangement of text.</p>
+<p><b>3. Images:</b> Help people understand your message.</p>
+<p><b>4. Layout:</b> How you arrange everything on a design.</p>
+</section>
+<section>
+<h2>Practice Exercise ✍️</h2>
+<p>Imagine you are designing a flyer for a free computer class. Answer these questions:</p>
+<label>1. Who is your target audience?</label>
+<input id="audience" placeholder="e.g. Students">
+<label>2. What colours would you choose?</label>
+<input id="colours" placeholder="e.g. Purple and white">
+<label>3. What main message should the flyer show?</label>
+<textarea id="message" placeholder="Write your flyer message"></textarea>
+<button onclick="checkWork()">Check My Exercise</button>
+<p id="result"></p>
+</section>
+<section>
+<p>MINI QUIZ</p>
+<h2>Test Yourself</h2>
+<p><b>1. What is graphic design used for?</b></p>
+<label><input type="radio" name="q1" value="a"> Communicating ideas visually</label><br>
+<label><input type="radio" name="q1" value="b"> Hiding information</label>
+<p><b>2. What does typography mean?</b></p>
+<label><input type="radio" name="q2" value="a"> Choosing food</label><br>
+<label><input type="radio" name="q2" value="b"> The style and arrangement of text</label><br><br>
+<button onclick="checkQuiz()">Submit Answers</button>
+<p id="score"></p>
+</section>
+<p><a href="index.html">← Back to SkillBloom</a></p>
+</main>
+<script>
+function checkWork(){
+let a=document.getElementById('audience').value.trim();
+let c=document.getElementById('colours').value.trim();
+let m=document.getElementById('message').value.trim();
+document.getElementById('result').textContent=a&&c&&m?"Great start! 🌟 You completed the exercise.":"Please answer all three questions first.";
+}
+function checkQuiz(){
+let a=document.querySelector('input[name="q1"]:checked');
+let b=document.querySelector('input[name="q2"]:checked');
+if(!a||!b){document.getElementById('score').textContent="Please answer both questions.";return;}
+let n=(a.value==="a"?1:0)+(b.value==="b"?1:0);
+document.getElementById('score').textContent="Your score: "+n+"/2. "+(n===2?"Excellent work! 🎉":"Keep learning and try again! 🌱");
+}
+</script>
+</body>
+</html>
