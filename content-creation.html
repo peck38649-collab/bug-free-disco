@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkillBloom | Content Creation</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#fff8ff;color:#35204f;line-height:1.8}
+header{background:white;padding:20px 6%;box-shadow:0 2px 12px #ddd}
+header h2{color:#6841a5;margin:0}
+main{max-width:850px;margin:35px auto;padding:20px}
+section{background:white;padding:28px;border-radius:22px;margin-bottom:24px;border:1px solid #eadff0}
+h1,h2{color:#6841a5}
+button{background:#6841a5;color:white;border:0;padding:13px 20px;border-radius:10px;font-size:16px}
+input{margin:10px}
+</style>
+</head>
+<body>
+<header><h2>SkillBloom 🌱</h2>Learn • Create • Practise • Grow</header>
+<main>
+<section>
+<p>YOUR LEARNING JOURNEY</p>
+<h1>Content Creation for Beginners</h1>
+<p>Learn to plan video ideas, write short scripts, tell stories, and create engaging posts.</p>
+<a href="#lesson"><button>Start Lesson 1 ↓</button></a>
+</section>
+<section id="lesson">
+<h2>Lesson 1: What Is Content Creation?</h2>
+<p>Content creation means making useful or interesting material to share with an audience. It can include videos, pictures, written posts, stories, and audio.</p>
+<h3>Examples of content</h3>
+<ul>
+<li>A short video explaining something.</li>
+<li>A picture with an informative caption.</li>
+<li>A social media post teaching a useful tip.</li>
+<li>A short story that entertains people.</li>
+</ul>
+<h3>How to create good content</h3>
+<ol>
+<li>Choose the audience you want to reach.</li>
+<li>Pick a topic they may find useful or interesting.</li>
+<li>Decide whether to make a video, picture, or written post.</li>
+<li>Create your content with a clear message.</li>
+<li>Share it and learn from feedback.</li>
+</ol>
+</section>
+<section>
+<h2>Practice Exercise ✍️</h2>
+<p>Imagine you want to make a short video teaching beginners one useful skill.</p>
+<p><strong>1.</strong> Who is your target audience?</p>
+<input id="audience" placeholder="Write your answer here" style="width:90%;padding:10px">
+<p><strong>2.</strong> What topic will your video teach?</p>
+<input id="topic" placeholder="Write your answer here" style="width:90%;padding:10px">
+<p><strong>3.</strong> What type of content will you make?</p>
+<label><input type="radio" name="type" value="Video">Video</label>
+<label><input type="radio" name="type" value="Picture">Picture</label>
+<label><input type="radio" name="type" value="Written post">Written post</label>
+<br><br>
+<button onclick="checkWork()">Check Exercise</button>
+<p id="result"></p>
+</section>
+<section>
+<h2>Mini Quiz 🎯</h2>
+<p><strong>1. Which is an example of content?</strong></p>
+<label><input type="radio" name="q1" value="a">A short educational video</label><br>
+<label><input type="radio" name="q1" value="b">Keeping every idea secret</label>
+<p><strong>2. What should you consider before creating content?</strong></p>
+<label><input type="radio" name="q2" value="a">Only your phone colour</label><br>
+<label><input type="radio" name="q2" value="b">Your target audience</label><br><br>
+<button onclick="checkQuiz()">Submit Answers</button>
+<p id="score"></p>
+</section>
+<p><a href="index.html">← Back to SkillBloom Home</a></p>
+</main>
+<script>
+function checkWork(){
+let a=document.getElementById('audience').value.trim();
+let t=document.getElementById('topic').value.trim();
+let type=document.querySelector('input[name="type"]:checked');
+document.getElementById('result').textContent=
+a&&t&&type?'Great start! You have planned your content. Keep practising! 🌱':'Please answer all three questions first.';
+}
+function checkQuiz(){
+let a=document.querySelector('input[name="q1"]:checked');
+let b=document.querySelector('input[name="q2"]:checked');
+if(!a||!b){document.getElementById('score').textContent='Please answer both questions.';return;}
+let n=(a.value==='a'?1:0)+(b.value==='b'?1:0);
+document.getElementById('score').textContent='Your score: '+n+'/2. '+(n===2?'Excellent work! 🌟':'Review the lesson and try again.');
+}
+</script>
+</body>
+</html>
