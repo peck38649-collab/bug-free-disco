@@ -1,173 +1,484 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SkillBloom | Learn, Create, Practise, Grow</title>
+<meta name="theme-color" content="#0b1020">
+<meta name="description" content="Learn practical digital skills with SkillBloom. Explore digital marketing, content creation and graphic design through beginner-friendly lessons and practice.">
+<title>SkillBloom | Learn, Build, Grow</title>
+
 <style>
-:root{--purple:#6841a5;--deep:#35204f;--lavender:#f3eaff;--pink:#fff5fb;--text:#4b4554}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:#fffaff;color:var(--text);line-height:1.7}
-header{background:white;padding:18px 6%;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;border-bottom:1px solid #eee4f6}
-.logo{font-size:25px;font-weight:800;color:var(--purple)}
-.logo span{color:#d68bb9}
-nav{display:flex;gap:18px;flex-wrap:wrap}
-nav a{color:var(--deep);text-decoration:none;font-weight:600}
-nav a:hover{color:#ad69c8}
-.hero{text-align:center;padding:75px 20px 85px;background:linear-gradient(135deg,#f0e4ff,#fff1f8)}
-.tag{color:var(--purple);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:12px}
-h1{font-size:clamp(38px,7vw,65px);line-height:1.15;color:var(--deep);margin:18px auto;max-width:800px}
-.hero p{max-width:650px;margin:0 auto 25px;font-size:18px}
-.button{display:inline-block;background:var(--purple);color:white;padding:12px 22px;border:0;border-radius:30px;text-decoration:none;font-weight:700;cursor:pointer}
-.button:hover{background:var(--deep)}
-.button.light{background:white;color:var(--purple);border:1px solid #e5d5f5}
-section{padding:65px 6%;scroll-margin-top:20px}
-.section-head{text-align:center;max-width:650px;margin:0 auto 35px}
-h2{font-size:clamp(28px,4vw,38px);color:var(--deep);line-height:1.3;margin-bottom:12px}
-.section-head p{color:#716779}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:1100px;margin:auto}
-.card{background:white;border:1px solid #eee3f6;border-radius:20px;padding:25px;box-shadow:0 8px 25px #6841a50b}
-.card .emoji{font-size:35px}
-.card h3{color:var(--purple);font-size:21px;margin:8px 0}
-.card p{margin-bottom:16px}
-.card a{color:var(--purple);font-weight:700;text-decoration:none}
-.soft{background:var(--pink)}
-.steps{max-width:850px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:15px}
-.step{text-align:center;background:white;padding:22px 15px;border-radius:16px;border:1px solid #f0e3f5}
-.number{width:40px;height:40px;border-radius:50%;background:var(--lavender);color:var(--purple);font-weight:800;display:grid;place-items:center;margin:0 auto 10px}
-.practice{max-width:760px;margin:auto;background:var(--lavender);padding:28px;border-radius:20px}
-.practice li{margin:8px 0 8px 22px}
-footer{text-align:center;padding:35px 20px;background:var(--deep);color:white}
-footer p{margin:5px}
-.small{font-size:13px;opacity:.85}
-@media(max-width:600px){header{justify-content:center;text-align:center}nav{justify-content:center;gap:12px}.hero{padding:55px 18px 65px}section{padding:48px 5%}}
+:root {
+  --navy: #0b1020;
+  --deep: #151b32;
+  --purple: #a78bfa;
+  --pink: #f472b6;
+  --blue: #60a5fa;
+  --white: #ffffff;
+  --muted: #c5c9dc;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f7fc;
+  color: var(--navy);
+  line-height: 1.6;
+}
+
+a { text-decoration: none; }
+
+header {
+  background: var(--navy);
+  color: white;
+  padding: 18px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #30344b;
+}
+
+.logo {
+  color: white;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo span { color: var(--purple); }
+
+.tagline {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #e5e7f5;
+  font-size: 14px;
+}
+
+nav a:hover { color: var(--purple); }
+
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-align: center;
+  transition: transform .2s, opacity .2s;
+}
+
+.button:hover { transform: translateY(-2px); opacity: .9; }
+
+.button-primary {
+  background: linear-gradient(110deg, var(--purple), var(--pink));
+  color: #171128;
+}
+
+.hero {
+  background:
+    radial-gradient(ellipse at 85% 20%, #4c287d 0, transparent 40%),
+    linear-gradient(130deg, #0b1020, #17172e 65%, #252044);
+  color: white;
+  padding: 75px 7% 90px;
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 45px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.eyebrow {
+  color: var(--purple);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 5.5vw, 62px);
+  line-height: 1.08;
+  letter-spacing: -2px;
+  margin-bottom: 22px;
+}
+
+.gradient-text {
+  background: linear-gradient(100deg, #c4b5fd, #f9a8d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  color: #d7d9e8;
+  max-width: 540px;
+  margin-bottom: 28px;
+  font-size: 16px;
+}
+
+.hero-art {
+  min-height: 290px;
+  border: 1px solid #63558c;
+  border-radius: 28px;
+  background: linear-gradient(145deg, #252144, #12172b);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 28px;
+  box-shadow: 0 20px 65px #0004;
+}
+
+.hero-art .symbol {
+  font-size: 90px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.hero-art h2 { font-size: 25px; }
+
+.hero-art p {
+  margin: 8px 0 0;
+  font-size: 14px;
+}
+
+.benefits {
+  background: white;
+  margin: -35px 5% 0;
+  position: relative;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 12px 35px #17172e12;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.benefit-icon { font-size: 27px; }
+
+.benefits h3 { font-size: 15px; margin: 5px 0; }
+
+.benefits p { font-size: 12px; color: #62677e; }
+
+section { padding: 65px 6%; }
+
+.section-heading { margin-bottom: 28px; }
+
+.section-heading .eyebrow { margin-bottom: 6px; }
+
+.section-heading h2 {
+  font-size: clamp(27px, 4vw, 36px);
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.section-heading p { color: #62677e; }
+
+.courses {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.course {
+  border-radius: 20px;
+  padding: 25px;
+  border: 1px solid #e6e5f2;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 24px #17172e08;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.course:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px #17172e15;
+}
+
+.course-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 17px;
+  display: grid;
+  place-items: center;
+  font-size: 29px;
+  margin-bottom: 18px;
+}
+
+.marketing { background: #f0eaff; }
+.content { background: #ffe8f1; }
+.design { background: #e5efff; }
+
+.course h3 { font-size: 21px; margin-bottom: 9px; }
+
+.course p {
+  font-size: 14px;
+  color: #62677e;
+  margin-bottom: 16px;
+}
+
+.course ul {
+  list-style: none;
+  margin-bottom: 22px;
+  font-size: 13px;
+  color: #444a61;
+}
+
+.course li { margin: 7px 0; }
+
+.course li::before {
+  content: "✓";
+  color: #8056d8;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.course .button {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.button-marketing { background: #a78bfa; color: #171128; }
+.button-content { background: #f472b6; color: #351127; }
+.button-design { background: #93c5fd; color: #102442; }
+
+.challenge {
+  margin: 0 6% 65px;
+  padding: 32px;
+  border-radius: 22px;
+  color: white;
+  background: linear-gradient(120deg, #11182c, #32204d);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.challenge h2 { font-size: 25px; margin-bottom: 8px; }
+
+.challenge p { color: #d8d6e9; font-size: 14px; }
+
+.about {
+  background: white;
+  text-align: center;
+}
+
+.about p {
+  max-width: 690px;
+  margin: 0 auto 20px;
+  color: #62677e;
+}
+
+footer {
+  background: var(--navy);
+  color: white;
+  padding: 35px 6%;
+  text-align: center;
+}
+
+footer .logo { margin-bottom: 10px; }
+
+footer p { color: var(--muted); font-size: 13px; }
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 18px 0;
+}
+
+.footer-links a { color: #e5e7f5; font-size: 13px; }
+
+@media (max-width: 800px) {
+  header { padding: 17px 5%; }
+  nav { gap: 13px; }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 55px 6% 70px;
+    gap: 30px;
+  }
+  .hero-art { min-height: 220px; }
+  .hero-art .symbol { font-size: 65px; }
+  .benefits { grid-template-columns: repeat(2, 1fr); margin-left: 4%; margin-right: 4%; }
+  .courses { grid-template-columns: 1fr; }
+  .course { padding: 24px; }
+  section { padding: 48px 5%; }
+  .challenge { margin: 0 5% 48px; padding: 25px; }
+}
+
+@media (max-width: 420px) {
+  header { align-items: flex-start; }
+  nav { width: 100%; }
+  nav a { font-size: 13px; }
+  .hero h1 { letter-spacing: -1px; }
+  .benefits { padding: 18px 10px; gap: 18px 8px; }
+  .benefits h3 { font-size: 13px; }
+  .benefits p { font-size: 11px; }
+  .button { padding: 11px 16px; }
+}
 </style>
 </head>
+
 <body>
 <header>
-  <a class="logo" href="#home" style="text-decoration:none">Skill<span>Bloom</span> 🌱</a>
-  <nav>
+  <div>
+    <a class="logo" href="index.html">✿ Skill<span>Bloom</span></a>
+    <div class="tagline">LEARN · BUILD · GROW</div>
+  </div>
+  <nav aria-label="Main navigation">
     <a href="#home">Home</a>
-    <a href="#learn">Learn</a>
-    <a href="#create">Create</a>
-    <a href="#practice">Practise</a>
+    <a href="#courses">Courses</a>
     <a href="#about">About</a>
+    <a href="#challenge">Challenge</a>
   </nav>
+  <a class="button button-primary" href="#courses">Start Learning</a>
 </header>
 
 <main>
 <section class="hero" id="home">
-  <div class="tag">Your journey starts here</div>
-  <h1>Learn a skill.<br>Create something amazing.</h1>
-  <p>Welcome to SkillBloom — a friendly space for beginners to learn digital skills, practise their ideas, and grow with confidence.</p>
-  <a class="button" href="#learn">Start Learning 🌱</a>
-  <a class="button light" href="#create">Explore Creativity</a>
+  <div>
+    <div class="eyebrow">Your next chapter starts here</div>
+    <h1>Learn a skill.<br>Create something <span class="gradient-text">amazing.</span></h1>
+    <p>
+      Welcome to SkillBloom, your friendly space to learn useful digital
+      skills. Explore beginner-friendly lessons, practise what you learn,
+      and take small steps toward a brighter future.
+    </p>
+    <a class="button button-primary" href="#courses">Explore Learning Paths →</a>
+  </div>
+  <div class="hero-art">
+    <div class="symbol">🌱 ✨</div>
+    <h2>Your ideas can grow here.</h2>
+    <p>Learn at your pace. Practise with purpose. Keep growing.</p>
+  </div>
 </section>
 
-<section id="learn">
-  <div class="section-head">
-    <div class="tag">Learn something new</div>
+<div class="benefits">
+  <div>
+    <div class="benefit-icon">💻</div>
+    <h3>Learn at Your Pace</h3>
+    <p>Simple lessons to follow.</p>
+  </div>
+  <div>
+    <div class="benefit-icon">✍️</div>
+    <h3>Hands-On Practice</h3>
+    <p>Put your learning to work.</p>
+  </div>
+  <div>
+    <div class="benefit-icon">🚀</div>
+    <h3>Build Real Skills</h3>
+    <p>Grow your confidence.</p>
+  </div>
+  <div>
+    <div class="benefit-icon">💜</div>
+    <h3>Keep Growing</h3>
+    <p>One step at a time.</p>
+  </div>
+</div>
+
+<section id="courses">
+  <div class="section-heading">
+    <div class="eyebrow">Explore your possibilities</div>
     <h2>Choose Your Learning Path</h2>
-    <p>Start with the basics. Learn at your own pace and build your skills one step at a time.</p>
+    <p>Pick a skill, explore the lessons, and start building your future today.</p>
   </div>
-  <div class="grid">
-    <article class="card">
-      <div class="emoji">📱</div>
+
+  <div class="courses">
+    <article class="course">
+      <div class="course-icon marketing">📣</div>
       <h3>Digital Marketing</h3>
-      <p>Learn how brands reach people online, understand audiences, and create useful marketing content.</p>
-      <a href="digital-marketing.html">Start Learning →</a>
-    <article class="card">
-      <div class="emoji">🎬</div>
+      <p>Discover how brands connect with people and grow online using smart digital strategies.</p>
+      <ul>
+        <li>Marketing fundamentals</li>
+        <li>Social media marketing</li>
+        <li>Content strategy</li>
+        <li>Growing an online audience</li>
+      </ul>
+      <a class="button button-marketing" href="digital-marketing.html">Start Learning →</a>
+    </article>
+
+    <article class="course">
+      <div class="course-icon content">🎬</div>
       <h3>Content Creation</h3>
-      <p>Learn to plan video ideas, write short scripts, tell stories, and create engaging posts.</p>
-      <a href="content-creation.html">Start Learning →</a>
+      <p>Turn your ideas into engaging content and learn to create with confidence.</p>
+      <ul>
+        <li>Finding content ideas</li>
+        <li>Writing scripts</li>
+        <li>Creating engaging videos</li>
+        <li>Building your style</li>
+      </ul>
+      <a class="button button-content" href="content-creation.html">Start Learning →</a>
     </article>
-    <article class="card">
-      <div class="emoji">🎨</div>
+
+    <article class="course">
+      <div class="course-icon design">🎨</div>
       <h3>Graphic Design</h3>
-      <p>Discover colours, fonts, layouts, and how to design clear and attractive graphics.</p>
-      <a href="graphic-design.html">Explore beginner practice →</a>
+      <p>Explore colour, layout, and visual storytelling to make designs that stand out.</p>
+      <ul>
+        <li>Design fundamentals</li>
+        <li>Colour and typography</li>
+        <li>Social media graphics</li>
+        <li>Creative practice</li>
+      </ul>
+      <a class="button button-design" href="graphic-design.html">Start Learning →</a>
     </article>
   </div>
 </section>
 
-<section class="soft" id="create">
-  <div class="section-head">
-    <div class="tag">Turn knowledge into action</div>
-    <h2>Learn It. Then Create It.</h2>
-    <p>Every new skill gives you an opportunity to make something of your own.</p>
+<div class="challenge" id="challenge">
+  <div>
+    <div class="eyebrow">Your beginner challenge</div>
+    <h2>Take the 7-Day Skills Challenge ✨</h2>
+    <p>Spend a little time learning each day. Practise, build confidence, and celebrate your progress.</p>
   </div>
-  <div class="grid">
-    <article class="card">
-      <div class="emoji">💡</div>
-      <h3>Find an Idea</h3>
-      <p>Choose a topic you care about and decide what you want to make.</p>
-    </article>
-    <article class="card">
-      <div class="emoji">🛠️</div>
-      <h3>Make Your First Draft</h3>
-      <p>Use what you've learned to create a simple design, video, or campaign idea.</p>
-    </article>
-    <article class="card">
-      <div class="emoji">✨</div>
-      <h3>Improve and Share</h3>
-      <p>Review your work, make improvements, and celebrate what you've achieved.</p>
-    </article>
-  </div>
-</section>
+  <a class="button button-primary" href="#courses">Choose a Course →</a>
+</div>
 
-<section id="practice">
-  <div class="section-head">
-    <div class="tag">Your first mini project</div>
-    <h2>Let's Practise!</h2>
-    <p>You don't need to know everything before you begin. Start small and learn by doing.</p>
+<section class="about" id="about">
+  <div class="section-heading">
+    <div class="eyebrow">A little about us</div>
+    <h2>Small Steps. Big Possibilities.</h2>
   </div>
-  <div class="practice">
-    <h3 style="color:var(--deep)">🌟 Beginner Challenge: Create Something Today</h3>
-    <ol>
-      <li><strong>Choose:</strong> Pick digital marketing, content creation, or graphic design.</li>
-      <li><strong>Plan:</strong> Write down one thing you want to make.</li>
-      <li><strong>Create:</strong> Spend 15 minutes making your first version.</li>
-      <li><strong>Reflect:</strong> Write one thing you learned and one thing to improve.</li>
-    </ol>
-    <p id="challenge-message" style="margin:18px 0">Ready to take your first step?</p>
-    <button class="button" onclick="startChallenge()">I'm Ready to Practise!</button>
-  </div>
-</section>
-
-<section class="soft" id="about">
-  <div class="section-head">
-    <div class="tag">A little about us</div>
-    <h2>Welcome to SkillBloom</h2>
-    <p>SkillBloom is a learning and creativity platform built around one simple idea: learn a skill, use it to create something, practise, and keep growing.</p>
-    <p style="margin-top:15px">You don't have to be an expert to begin. Every expert was once a beginner. 🌱</p>
-    <a class="button" href="#learn" style="margin-top:22px">Find Your First Skill</a>
-  </div>
+  <p>
+    SkillBloom is a learning space for curious beginners who want to
+    explore digital skills. Start where you are, learn one thing at a
+    time, and keep practising. You do not have to know everything to begin.
+  </p>
+  <a class="button button-primary" href="#courses">Start Your Journey</a>
 </section>
 </main>
 
 <footer>
-  <h2 style="color:white">SkillBloom 🌱</h2>
-  <p>Learn. Create. Practise. Grow.</p>
-  <p class="small">A little progress every day adds up.</p>
-  <p class="small">© 2026 SkillBloom</p>
+  <a class="logo" href="index.html">✿ Skill<span>Bloom</span></a>
+  <p>Learn today. Build tomorrow.</p>
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#courses">Courses</a>
+    <a href="#about">About</a>
+    <a href="#challenge">Challenge</a>
+  </div>
+  <p>© 2026 SkillBloom. Keep learning. Keep growing.</p>
 </footer>
-
-<script>
-function startChallenge(){
-  document.getElementById("challenge-message").textContent =
-    "Wonderful! 🌱 Choose one skill above, try the mini project, and be proud that you started. Your progress begins with practice!";
-}
-</script>
 </body>
 </html>
-
-
-    
-
-
-
-    
