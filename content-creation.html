@@ -164,5 +164,96 @@ function makeVideoPlan() {
   });
 }
 </script>
+  
+<section style="background:#fff;padding:28px;border-radius:18px;margin-top:25px;border:1px solid #eadcf7;">
+  <h2>🎬 Lesson 2: Create Your First Video</h2>
+  <p>Learn two beginner-friendly ways to make your first video. Choose the style that feels comfortable for you.</p>
+
+  <h3>📱 Option A: Record with Your Phone</h3>
+  <ol>
+    <li>Clean your phone camera lens.</li>
+    <li>Face a window or another source of light.</li>
+    <li>Keep your phone steady and record vertically.</li>
+    <li>Speak clearly and keep your first video short.</li>
+    <li>Record again if you make a mistake. You don't need to be perfect!</li>
+  </ol>
+
+  <h3>🎨 Option B: Make a Faceless or AI Video</h3>
+  <ol>
+    <li>Choose a topic, such as study tips or interesting facts.</li>
+    <li>Write a short script of about 3–5 sentences.</li>
+    <li>Use your own pictures, permitted stock clips, or AI-generated visuals.</li>
+    <li>Add your voice or a text overlay to explain the topic.</li>
+    <li>Arrange the clips and add captions using a video editor.</li>
+  </ol>
+
+  <h3>✂️ Basic Editing Checklist</h3>
+  <ul>
+    <li>Trim unnecessary beginnings and endings.</li>
+    <li>Add readable text or captions.</li>
+    <li>Make sure the voice is easy to hear.</li>
+    <li>Use music only when you have permission to use it.</li>
+    <li>Watch the whole video before sharing it.</li>
+  </ul>
+
+  <h3>📝 Practical Exercise</h3>
+  <p>Choose one video style and fill in the fields below to plan your first video.</p>
+
+  <label for="videoStyle">Choose your video style:</label><br>
+  <select id="videoStyle" style="padding:10px;margin:10px 0;width:100%;">
+    <option value="">Choose an option</option>
+    <option value="Phone video">Ordinary phone video</option>
+    <option value="Faceless video">Faceless video</option>
+    <option value="AI-assisted video">AI-assisted video</option>
+  </select><br>
+
+  <label for="videoTopic">What is your video about?</label><br>
+  <input id="videoTopic" type="text" placeholder="Example: 3 study tips" style="padding:10px;margin:10px 0;width:95%;"><br>
+
+  <label for="videoVisual">What will viewers see?</label><br>
+  <input id="videoVisual" type="text" placeholder="Example: Me speaking or pictures with text" style="padding:10px;margin:10px 0;width:95%;"><br>
+
+  <label for="videoAudio">What will viewers hear or read?</label><br>
+  <input id="videoAudio" type="text" placeholder="Example: My voice or captions" style="padding:10px;margin:10px 0;width:95%;"><br>
+
+  <button type="button" onclick="makeVideoPlan()" style="padding:12px 18px;background:#6841a5;color:white;border:0;border-radius:10px;">Create My Video Plan</button>
+
+  <div id="videoPlanResult" style="margin-top:18px;overflow-wrap:anywhere;"></div>
+
+  <h3>🌱 Mini Assignment</h3>
+  <p>Create a 15–30 second video using your chosen style. It should have an opening hook, one or two helpful points, and a clear ending. You can practise privately before sharing it.</p>
+</section>
+
+<script>
+function makeVideoPlan() {
+  const style = document.getElementById('videoStyle').value;
+  const topic = document.getElementById('videoTopic').value.trim();
+  const visual = document.getElementById('videoVisual').value.trim();
+  const audio = document.getElementById('videoAudio').value.trim();
+  const result = document.getElementById('videoPlanResult');
+
+  if (!style || !topic || !visual || !audio) {
+    result.textContent = 'Please choose a video style and complete all three fields.';
+    return;
+  }
+
+  result.replaceChildren();
+  const heading = document.createElement('h3');
+  heading.textContent = 'Your First Video Plan';
+  result.appendChild(heading);
+
+  [
+    ['Style', style],
+    ['Topic', topic],
+    ['Visuals', visual],
+    ['Voice or text', audio]
+  ].forEach(function(item) {
+    const p = document.createElement('p');
+    p.textContent = item[0] + ': ' + item[1];
+    result.appendChild(p);
+  });
+}
+</script>
+
 </body>
 </html>
