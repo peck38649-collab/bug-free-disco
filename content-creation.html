@@ -218,7 +218,7 @@ function makeVideoPlan() {
 
   <button type="button" onclick="makeVideoPlan()" style="padding:12px 18px;background:#6841a5;color:white;border:0;border-radius:10px;">Create My Video Plan</button>
 
-  <div id="videoPlanResult" style="margin-top:18px;overflow-wrap:anywhere;"></div>
+  <div id="videoPlanResultNew" style="margin-top:18px;overflow-wrap:anywhere;"></div>
 
   <h3>🌱 Mini Assignment</h3>
   <p>Create a 15–30 second video using your chosen style. It should have an opening hook, one or two helpful points, and a clear ending. You can practise privately before sharing it.</p>
@@ -230,7 +230,7 @@ function makeVideoPlan() {
   const topic = document.getElementById('videoTopic').value.trim();
   const visual = document.getElementById('videoVisual').value.trim();
   const audio = document.getElementById('videoAudio').value.trim();
-  const result = document.getElementById('videoPlanResult');
+  const result = document.getElementById('videoPlanResultNew');
 
   if (!style || !topic || !visual || !audio) {
     result.textContent = 'Please choose a video style and complete all three fields.';
