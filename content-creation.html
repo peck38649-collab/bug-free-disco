@@ -88,5 +88,81 @@ let n=(a.value==='a'?1:0)+(b.value==='b'?1:0);
 document.getElementById('score').textContent='Your score: '+n+'/2. '+(n===2?'Excellent work! 🌟':'Review the lesson and try again.');
 }
 </script>
+  <section>
+  <h2>🎬 Practical Lesson 1: Plan Your First Video</h2>
+
+  <p>Welcome to Content Creation! In this lesson, you will plan a short video before recording it.</p>
+
+  <h3>Step 1: Choose your video topic</h3>
+  <p>Pick something you know or want to teach. For example: “3 ways to stay productive” or “How to organise your phone.”</p>
+
+  <h3>Step 2: Know your audience</h3>
+  <p>Ask yourself: Who will watch my video, and what will they learn from it?</p>
+
+  <h3>Step 3: Write a simple script</h3>
+  <p>Use this easy structure:</p>
+  <ul>
+    <li><strong>Hook:</strong> Get attention with a question or interesting statement.</li>
+    <li><strong>Value:</strong> Share 2 or 3 helpful points.</li>
+    <li><strong>Ending:</strong> Tell viewers what to do next.</li>
+  </ul>
+
+  <h3>Example script</h3>
+  <p><strong>Hook:</strong> “Do you want to make better use of your phone?”</p>
+  <p><strong>Value:</strong> “Organise your apps, remove distractions, and use your notes app to plan your day.”</p>
+  <p><strong>Ending:</strong> “Follow for more simple digital tips!”</p>
+
+  <h3>✍️ Your Practical Exercise</h3>
+  <p>Plan your own video using the fields below. Your answers will appear when you tap the button.</p>
+
+  <label for="videoAudience">Who is your video for?</label><br>
+  <input id="videoAudience" type="text" placeholder="e.g. students">
+
+  <label for="videoTopic">What is your video about?</label><br>
+  <input id="videoTopic" type="text" placeholder="e.g. study tips">
+
+  <label for="videoHook">Write your opening hook</label><br>
+  <input id="videoHook" type="text" placeholder="e.g. Try these 3 study tips">
+
+  <label for="videoValue">Write one helpful point</label><br>
+  <input id="videoValue" type="text" placeholder="e.g. Plan your tasks">
+
+  <button type="button" onclick="makeVideoPlan()">Show My Video Plan</button>
+  <div id="videoPlanResult"></div>
+
+  <h3>📝 Mini Assignment</h3>
+  <p>Write a short script for a 15–30 second video using a hook, two helpful points, and an ending.</p>
+</section>
+
+<script>
+function makeVideoPlan() {
+  const audience = document.getElementById('videoAudience').value.trim();
+  const topic = document.getElementById('videoTopic').value.trim();
+  const hook = document.getElementById('videoHook').value.trim();
+  const value = document.getElementById('videoValue').value.trim();
+  const result = document.getElementById('videoPlanResult');
+
+  if (!audience || !topic || !hook || !value) {
+    result.textContent = 'Please fill in all four fields first.';
+    return;
+  }
+
+  result.innerHTML = '';
+  const heading = document.createElement('h4');
+  heading.textContent = 'Your Video Plan';
+  result.appendChild(heading);
+
+  [
+    ['Audience', audience],
+    ['Topic', topic],
+    ['Hook', hook],
+    ['Helpful point', value]
+  ].forEach(function(item) {
+    const p = document.createElement('p');
+    p.textContent = item[0] + ': ' + item[1];
+    result.appendChild(p);
+  });
+}
+</script>
 </body>
 </html>
