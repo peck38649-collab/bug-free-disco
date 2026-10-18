@@ -127,7 +127,7 @@ document.getElementById('score').textContent='Your score: '+n+'/2. '+(n===2?'Exc
   <label for="videoValue">Write one helpful point</label><br>
   <input id="videoValue" type="text" placeholder="e.g. Plan your tasks">
 
-  <button type="button" onclick="makeVideoPlan()">Show My Video Plan</button>
+  <button type="button"="makeOldVideoPlan()">Show My Video Plan</button>
   <div id="videoPlanResult"></div>
 
   <h3>📝 Mini Assignment</h3>
@@ -135,7 +135,7 @@ document.getElementById('score').textContent='Your score: '+n+'/2. '+(n===2?'Exc
 </section>
 
 <script>
-function makeVideoPlan() {
+function makeOldVideoPlan() {
   const audience = document.getElementById('videoAudience').value.trim();
   const topic = document.getElementById('videoTopic').value.trim();
   const hook = document.getElementById('videoHook').value.trim();
