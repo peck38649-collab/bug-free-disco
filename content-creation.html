@@ -218,7 +218,7 @@ function makeOldVideoPlan() {
 
   <button type="button" onclick="makeVideoPlan()" style="padding:12px 18px;background:#6841a5;color:white;border:0;border-radius:10px;">Create My Video Plan</button>
 
-  <div id="videoPlanResultNew" style="margin-top:18px;overflow-wrap:anywhere;"></div>
+  <div id="videoPlanResultNew" style="display:none;margin - top:18px;overflow-wrap:anywhere;"></div>
 
   <h3>🌱 Mini Assignment</h3>
   <p>Create a 15–30 second video using your chosen style. It should have an opening hook, one or two helpful points, and a clear ending. You can practise privately before sharing it.</p>
@@ -236,7 +236,7 @@ function makeVideoPlan() {
     result.textContent = 'Please choose a video style and complete all three fields.';
     return;
   }
-
+  result. style. display = 'block';
   result.replaceChildren();
   const heading = document.createElement('h3');
   heading.textContent = 'Your First Video Plan';
